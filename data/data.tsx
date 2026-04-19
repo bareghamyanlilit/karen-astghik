@@ -10,7 +10,12 @@ export const calendar: any = [
 
 export const program: any = [
   {
-    time: "13:30",
+    time: "11:00",
+    title: "Հարսի տուն",
+    // address: "",
+  },
+  {
+    time: "13:00",
     title: "Պսակադրություն",
     address: "Սուրբ Աննա",
   },

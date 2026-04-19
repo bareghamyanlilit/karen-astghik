@@ -17,7 +17,7 @@ export function Home() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 4000);
   }, []);
 
   if (loading) {
