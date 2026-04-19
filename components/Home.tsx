@@ -97,7 +97,7 @@ export function Home() {
               ՍԻՐԵԼԻՆԵՐ
             </p>
           </motion.h3>
-          <motion.p {...anim} className="  text-2xl mt-10">
+          <motion.p {...anim} className="  text-xl mt-10">
             {txt1}
           </motion.p>
         </div>

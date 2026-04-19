@@ -12,7 +12,7 @@ export function Program() {
         </p>
       </motion.h2>
 
-      {program.map((item:any, i:any) => (
+      {program.map((item: any, i: any) => (
         <div className=" bg-cover bg-no-repeat  bg-center" key={i}>
           <ProgramItem {...item} />
         </div>
@@ -21,21 +21,23 @@ export function Program() {
   );
 }
 
-const getImage = (title:any) => {
+const getImage = (title: any) => {
   if (title === "Պսակադրություն") return "/ekexeci.jpg";
   if (title === "Հարսանյաց հանդիսություն") return "/restoran.jpg";
   return null;
 };
 
-const ProgramItem = ({ time, title, address }:any) => {
+const ProgramItem = ({ time, title, address }: any) => {
   const img = getImage(title);
 
   return (
     <div className="my-8 flex flex-col items-center text-xl">
       <motion.h3 {...anim}>{title}</motion.h3>
-      <motion.p {...anim} className="text-sm opacity-80">
-        {address}
-      </motion.p>
+      {title != "Հարսի տուն" && (
+        <motion.p {...anim} className="text-sm opacity-80">
+          {address}
+        </motion.p>
+      )}
       <motion.p {...anim} className="">
         {time}
       </motion.p>
@@ -53,10 +55,7 @@ const ProgramItem = ({ time, title, address }:any) => {
       </motion.a>
 
       {title !== "Հարսանյաց հանդիսություն" && (
-        <img
-          src="/icon00.png"
-          className=" w-20 mt-5"
-        />
+        <img src="/icon00.png" className=" w-20 mt-5" />
       )}
     </div>
   );

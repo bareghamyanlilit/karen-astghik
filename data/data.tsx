@@ -12,7 +12,7 @@ export const program: any = [
   {
     time: "11:00",
     title: "Հարսի տուն",
-    address: "Norgavit 1in poxc. 1in pakuxi. 17tun",
+    address: "40.127685, 44.483053",
   },
   {
     time: "13:00",
