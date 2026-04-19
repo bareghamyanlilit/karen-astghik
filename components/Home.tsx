@@ -1,16 +1,32 @@
 "use client";
 import Image from "next/image";
 import { TimeBox } from "./TimeBox";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { MusicPlayer } from "./music";
 import { anim, calendar, date, txt1, txt2 } from "@/data/data";
 import { motion } from "framer-motion";
 import AttendanceGuests from "./RSVP";
 import { Program } from "./Program";
+import { Footer } from "./footer";
 
 export function Home() {
   const [isPlaying, setIsPlaying] = useState(false);
 
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="FontArmDecorativeU flex items-center justify-center h-screen text-3xl">
+        Loading...
+      </div>
+    );
+  }
   return (
     <div className="text-center overflow-hidden  FontArmDecorativeU ">
       {/* music button */}
@@ -66,7 +82,7 @@ export function Home() {
               <p className="text-4xl mb-10 -ml-8">ստղիկ</p>
             </div>
             {/* DATE */}
-            <h1 className="mt-110  FontArmDecorativeU text-5xl tracking-widest">
+            <h1 className="mt-[30vh] FontArmDecorativeU text-5xl tracking-widest">
               {date}
             </h1>
           </div>
@@ -231,6 +247,7 @@ export function Home() {
 
       {/* RSVP */}
       <AttendanceGuests />
+        <Footer />
     </div>
   );
 }

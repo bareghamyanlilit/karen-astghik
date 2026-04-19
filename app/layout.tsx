@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Footer } from "@/components/footer";
 
 export const metadata: Metadata = {
   title: "Կարեն և Աստղիկ",
@@ -34,7 +33,6 @@ export default function RootLayout({
         style={{ whiteSpace: "pre-line" }}
       >
         {children}
-        <Footer />
       </body>
     </html>
   );
