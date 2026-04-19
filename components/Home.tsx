@@ -66,7 +66,7 @@ export function Home() {
               <p className="text-4xl mb-10 -ml-8">ստղիկ</p>
             </div>
             {/* DATE */}
-            <h1 className="mt-100  FontArmDecorativeU text-5xl tracking-widest">
+            <h1 className="mt-110  FontArmDecorativeU text-5xl tracking-widest">
               {date}
             </h1>
           </div>
